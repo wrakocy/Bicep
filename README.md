@@ -25,3 +25,8 @@ az deployment group what-if --resource-group test-rg-uswest --parameters .\param
 ```
 az deployment group create --resource-group test-rg-uswest --parameters .\parameters\azure-architecture-dev.bicepparam  --template-file .\azure-architecture.bicep
 ```
+
+If the deployment succeeds, your target resource group should now resemble the following:
+
+![Resources](resources.png "Resources")
+
