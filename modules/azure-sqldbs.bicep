@@ -11,7 +11,7 @@ resource sqlServer 'Microsoft.Sql/servers@2024-05-01-preview' = {
 
   // App DB
   resource appDatabase 'databases' = {
-    name: '${deploymentOptions.applicationName}_${deploymentOptions.environmentName}-sqldb-appdb-01'
+    name: '${deploymentOptions.applicationName}-${deploymentOptions.environmentName}-sqldb-appdb-01'
     location: location
     sku: {
       name: 'Basic'
@@ -20,7 +20,7 @@ resource sqlServer 'Microsoft.Sql/servers@2024-05-01-preview' = {
 
   // Jobs DB
   resource jobsDatabase 'databases' = {
-    name: '${deploymentOptions.applicationName}_${deploymentOptions.environmentName}-sqldb-jobsdb-01'
+    name: '${deploymentOptions.applicationName}-${deploymentOptions.environmentName}-sqldb-jobsdb-01'
     location: location
     sku: {
       name: 'Basic'
